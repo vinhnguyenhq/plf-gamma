@@ -1,9 +1,39 @@
 import React from 'react'
+import Link from 'gatsby-link'
+import District from '../../components/District'
+import NoStoreHere from '../../components/NoStoreHere'
 
-const SocSon = () => (
-  <div>
-    <h1>Soc Son</h1>
-  </div>
-)
+const SocSon = ({ data }) => {
+  const haveData = data.allLocationsXlsxSheet1 ? true : false
+
+  return haveData ? (
+    <District nodes={data.allLocationsXlsxSheet1.edges} />
+  ) : (
+    <NoStoreHere />
+  )
+}
 
 export default SocSon
+
+export const SocSonQuery = graphql`
+  query SocSonQuery {
+    allLocationsXlsxSheet1(filter: { district: { eq: "Sóc Sơn" } }) {
+      edges {
+        node {
+          plf_id
+          complete_address
+          longitude
+          latitude
+          city
+          ward
+          district
+          planned_launch_date
+          week
+          status
+          contact_email
+          notes
+        }
+      }
+    }
+  }
+`

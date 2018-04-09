@@ -1,16 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import District from '../../components/District'
+import NoStoreHere from '../../components/NoStoreHere'
 
 const HoangMai = ({ data }) => {
-  return <District nodes={data.allLocationsXlsxSheet1.edges} />
+  const haveData = data.allLocationsXlsxSheet1 ? true : false
+
+  return haveData ? (
+    <District nodes={data.allLocationsXlsxSheet1.edges} />
+  ) : (
+    <NoStoreHere />
+  )
 }
 
 export default HoangMai
 
 export const HoangMaiQuery = graphql`
   query HoangMaiQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Hoàng Mai" } }) {
+    allLocationsXlsxSheet1(filter: { district: { eq: "Gia Lâm" } }) {
       edges {
         node {
           plf_id

@@ -1,9 +1,39 @@
 import React from 'react'
+import Link from 'gatsby-link'
+import District from '../../components/District'
+import NoStoreHere from '../../components/NoStoreHere'
 
-const MyDuc = () => (
-  <div>
-    <h1>My Duc</h1>
-  </div>
-)
+const MyDuc = ({ data }) => {
+  const haveData = data.allLocationsXlsxSheet1 ? true : false
+
+  return haveData ? (
+    <District nodes={data.allLocationsXlsxSheet1.edges} />
+  ) : (
+    <NoStoreHere />
+  )
+}
 
 export default MyDuc
+
+export const MyDucQuery = graphql`
+  query MyDucQuery {
+    allLocationsXlsxSheet1(filter: { district: { eq: "Mỹ Đức" } }) {
+      edges {
+        node {
+          plf_id
+          complete_address
+          longitude
+          latitude
+          city
+          ward
+          district
+          planned_launch_date
+          week
+          status
+          contact_email
+          notes
+        }
+      }
+    }
+  }
+`

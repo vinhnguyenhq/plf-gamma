@@ -24,7 +24,7 @@ const SaiGon = ({ data }) => {
           .sort((a, b) => a.toLowerCase() > b.toLowerCase())
           .map(item => (
             <li key={item}>
-              <Link to={`/sai-gon/${getSlug(item, getSlugOptions)}`}>
+              <Link to={`/ho-chi-minh/${getSlug(item, getSlugOptions)}`}>
                 {createDistrictName(item)}
               </Link>
             </li>

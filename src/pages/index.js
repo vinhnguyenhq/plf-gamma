@@ -13,7 +13,7 @@ const IndexPage = () => {
           <Link to="/thong-tin-chung">Thông tin chung</Link>
         </li>
         <li>
-          <Link to="/sai-gon/">Hồ Chí Minh</Link>
+          <Link to="/ho-chi-minh/">Hồ Chí Minh</Link>
         </li>
         <li>
           <Link to="/ha-noi/">Hà Nội</Link>

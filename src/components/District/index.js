@@ -1,15 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import StoreDetails from '../StoreDetails'
 
 const District = props => {
   return (
     <div>
       <p>Danh sách cửa hàng</p>
-      <ol>
+
+      <div>
         {props.nodes.map(item => {
-          return <li key={item.node.plf_id}>{item.node.complete_address}</li>
+          return <StoreDetails key={item.node.plf_id} item={item.node} />
         })}
-      </ol>
+      </div>
 
       <hr />
       <Link to={'/'}>Trang chủ</Link>

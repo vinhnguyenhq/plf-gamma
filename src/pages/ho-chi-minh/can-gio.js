@@ -32,6 +32,7 @@ export const CanGioQuery = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

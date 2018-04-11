@@ -32,6 +32,7 @@ export const HaiBaTrungQuery = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

@@ -13,14 +13,26 @@ const ThongTinChung = ({ data }) => {
   return (
     <div>
       <p>Một vài thông tin chung của hệ thống</p>
-      <ol>
+      <ul>
         <li>
           {`Số lượng cửa hàng ở Hà Nội là ${number_of_locations_in_ha_noi}`}
         </li>
         <li>
           {`Số lượng cửa hàng ở Sài Gòn là ${number_of_locations_in_hcm}`}
         </li>
-      </ol>
+        <li>20 đơn hàng tối đa cho mỗi nhà bán hàng mỗi ngày</li>
+        <li>Kích cỡ gói hàng: Tối đa 18 x 18 x 35</li>
+        <li>
+          Giờ làm việc:
+          <ol>
+            <li>Ministop: 24/7</li>
+            <li>BsMart: 24/7</li>
+            <li>FPT: 8:00 - 22:00</li>
+            <li>Truemoney: 8:00 - 22:00</li>
+          </ol>
+        </li>
+      </ul>
+      <hr />
       <Link to="/">Trang chủ</Link>
     </div>
   )

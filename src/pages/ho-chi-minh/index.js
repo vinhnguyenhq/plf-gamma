@@ -30,6 +30,7 @@ const SaiGon = ({ data }) => {
             </li>
           ))}
       </ul>
+      <hr />
       <Link to="/">Trang chủ</Link>
     </div>
   )

@@ -32,6 +32,7 @@ export const DistrictNo1Query = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

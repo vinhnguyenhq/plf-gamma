@@ -32,6 +32,7 @@ export const BaViQuery = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

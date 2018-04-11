@@ -32,6 +32,7 @@ export const TanBinhQuery = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

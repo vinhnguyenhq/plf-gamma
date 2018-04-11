@@ -32,6 +32,7 @@ export const DanPhuongQuery = graphql`
           status
           contact_email
           notes
+          partner_type
         }
       }
     }

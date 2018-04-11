@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import './index.css'
+
+import 'spectre.css/dist/spectre.min.css'
+import 'spectre.css/dist/spectre-exp.min.css'
+import 'spectre.css/dist/spectre-icons.min.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>

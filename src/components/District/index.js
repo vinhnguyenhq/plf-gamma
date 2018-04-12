@@ -4,12 +4,17 @@ import StoreDetails from '../StoreDetails'
 
 const District = props => {
   return (
-    <div>
-      <p>Danh sách cửa hàng</p>
-
-      <div>
+    <div className="container">
+      <div className="docs-note">
+        <p>Danh sách cửa hàng</p>
+      </div>
+      <div className="columns">
         {props.nodes.map(item => {
-          return <StoreDetails key={item.node.plf_id} item={item.node} />
+          return (
+            <div key={item.node.plf_id} className="column col-6 col-xs-12">
+              <StoreDetails item={item.node} />
+            </div>
+          )
         })}
       </div>
 

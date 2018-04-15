@@ -11,8 +11,8 @@ const ThongTinChung = ({ data }) => {
   ).length
 
   return (
-    <div>
-      <p>Một vài thông tin chung của hệ thống</p>
+    <div className="container">
+      <h6 className="s-title">Một vài thông tin chung của hệ thống</h6>
       <ul>
         <li>
           {`Số lượng cửa hàng ở Hà Nội là ${number_of_locations_in_ha_noi}`}

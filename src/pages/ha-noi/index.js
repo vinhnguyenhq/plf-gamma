@@ -9,10 +9,10 @@ const HaNoi = ({ data }) => {
   }
 
   return (
-    <div>
-      <p>{`Danh sách các quận đã có cửa hàng ở Hà Nội với tổng số cửa hàng là ${
+    <div className="container">
+      <h6 className="s-title">{`Danh sách các quận đã có cửa hàng ở Hà Nội với tổng số cửa hàng là ${
         locations.totalCount
-      }`}</p>
+      }`}</h6>
       <ul>
         {locations.distinct.map(item => (
           <li key={item}>
@@ -29,7 +29,7 @@ const HaNoi = ({ data }) => {
 export default HaNoi
 
 export const HaNoiQuery = graphql`
-  query HaNoiQuery {
+  query HaNoi1Query {
     allLocationsXlsxSheet1(filter: { city: { eq: "Hanoi City" } }) {
       totalCount
       distinct(field: district)

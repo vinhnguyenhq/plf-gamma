@@ -3,32 +3,34 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
+import NavBar from '../components/NavBar'
+import SideBar from '../components/SideBar'
 
 import 'spectre.css/dist/spectre.min.css'
 import 'spectre.css/dist/spectre-exp.min.css'
 import 'spectre.css/dist/spectre-icons.min.css'
+import './index.css'
 
-const TemplateWrapper = ({ children }) => (
-  <div>
+const TemplateWrapper = ({ data, children }) => (
+  <div className="docs-container off-canvas off-canvas-sidebar-show">
     <Helmet
-      title="LEX - Partner Locations"
+      title="Partner Location Finder"
       meta={[
-        { name: 'description', content: 'LEX Partner Locations' },
+        {
+          name: 'description',
+          content: 'Lazada Express Partner Location Finder',
+        },
         { name: 'keywords', content: 'LEX' },
       ]}
     />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-      className="docs-content"
-    >
-      {children()}
+    <div className="docs-navbar">
+      <NavBar />
     </div>
+    <div id="sidebar" className="docs-sidebar off-canvas-sidebar">
+      <SideBar data={data.allLocationsXlsxSheet1} />
+    </div>
+    <a className="off-canvas-overlay" href="#close" />
+    <div className="docs-content off-canvas-content">{children()}</div>
   </div>
 )
 
@@ -37,3 +39,17 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
+export const SideBarQuery = graphql`
+  query MetaDataQuery {
+    allLocationsXlsxSheet1(filter: { city: { regex: "/City/" } }) {
+      distinct(field: district)
+      edges {
+        node {
+          city
+          district
+        }
+      }
+    }
+  }
+`

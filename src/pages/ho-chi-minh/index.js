@@ -14,11 +14,10 @@ const SaiGon = ({ data }) => {
   }
 
   return (
-    <div>
-      <p
-      >{`Danh sách các quận đã có cửa hàng ở Sài Gòn với tổng số cửa hàng là ${
+    <div className="container">
+      <h6 className="s-title">{`Danh sách các quận đã có cửa hàng ở Sài Gòn với tổng số cửa hàng là ${
         locations.totalCount
-      }`}</p>
+      }`}</h6>
       <ul>
         {locations.distinct
           .sort((a, b) => a.toLowerCase() > b.toLowerCase())

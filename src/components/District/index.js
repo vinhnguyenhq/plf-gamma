@@ -5,9 +5,7 @@ import StoreDetails from '../StoreDetails'
 const District = props => {
   return (
     <div className="container">
-      <div className="docs-note">
-        <p>Danh sách cửa hàng</p>
-      </div>
+      <h6 className="s-title" />
       <div className="columns">
         {props.nodes.map(item => {
           return (

@@ -10,18 +10,23 @@ const HaNoi = ({ data }) => {
 
   return (
     <div className="container">
-      <h6 className="s-title">{`Danh sách các quận đã có cửa hàng ở Hà Nội với tổng số cửa hàng là ${
-        locations.totalCount
-      }`}</h6>
-      <ul>
-        {locations.distinct.map(item => (
-          <li key={item}>
-            <Link to={`/ha-noi/${getSlug(item, getSlugOptions)}`}>{item}</Link>
-          </li>
-        ))}
-      </ul>
-      <hr />
-      <Link to="/">Trang chủ</Link>
+      <h3 className="s-title">Hà Nội</h3>
+      <div className="docs-note">
+        <p>
+          {`Danh sách các quận đã có cửa hàng ở Hà Nội với tổng số cửa hàng là ${
+            locations.totalCount
+          }`}
+        </p>
+        <ul>
+          {locations.distinct.sort().map(item => (
+            <li key={item}>
+              <Link to={`/ha-noi/${getSlug(item, getSlugOptions)}`}>
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

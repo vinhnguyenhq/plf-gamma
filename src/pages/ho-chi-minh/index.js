@@ -15,22 +15,23 @@ const SaiGon = ({ data }) => {
 
   return (
     <div className="container">
-      <h6 className="s-title">{`Danh sách các quận đã có cửa hàng ở Sài Gòn với tổng số cửa hàng là ${
-        locations.totalCount
-      }`}</h6>
-      <ul>
-        {locations.distinct
-          .sort((a, b) => a.toLowerCase() > b.toLowerCase())
-          .map(item => (
+      <h3 className="s-title">Hồ Chí Minh</h3>
+      <div className="docs-note">
+        <p>
+          {`Danh sách các quận đã có cửa hàng ở Sài Gòn với tổng số cửa hàng là ${
+            locations.totalCount
+          }`}
+        </p>
+        <ul>
+          {locations.distinct.sort().map(item => (
             <li key={item}>
               <Link to={`/ho-chi-minh/${getSlug(item, getSlugOptions)}`}>
                 {createDistrictName(item)}
               </Link>
             </li>
           ))}
-      </ul>
-      <hr />
-      <Link to="/">Trang chủ</Link>
+        </ul>
+      </div>
     </div>
   )
 }

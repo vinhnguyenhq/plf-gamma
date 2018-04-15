@@ -110,7 +110,7 @@ const SideBar = ({ data }) => {
                         key={`${counts[c].city}-${counts[c].district}`}
                         className="menu-item"
                       >
-                        <Link to={`/ho-chi-minh/${getSlug(c, getSlugOptions)}`}>
+                        <Link to={`/ha-noi/${getSlug(c, getSlugOptions)}`}>
                           {createDistrictName(c)}
                         </Link>
                       </li>

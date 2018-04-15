@@ -11,7 +11,14 @@ const StoreDetails = props => {
       </div>
       <div className="card-body" />
       <div className="card-footer">
-        <i className="icon icon-2x icon-location" />
+        <a
+          target="_blank"
+          href={`https://www.google.com/maps/search/?api=1&query=${
+            props.item.complete_address
+          }`}
+        >
+          <i className="icon icon-2x icon-location" />
+        </a>
       </div>
     </div>
   )

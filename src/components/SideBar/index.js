@@ -65,7 +65,6 @@ const SideBar = ({ data }) => {
             <label
               onClick={() => {
                 navigateTo('/')
-                window.location.reload(false)
               }}
               className="accordion-header c-hand"
             >
@@ -94,10 +93,10 @@ const SideBar = ({ data }) => {
                         className="menu-item"
                       >
                         <Link
-                          to={`/ho-chi-minh/${getSlug(c, getSlugOptions)}`}
-                          onClick={() => {
-                            window.location.reload(false)
-                          }}
+                          to={`/ho-chi-minh/${getSlug(
+                            c,
+                            getSlugOptions
+                          )}/#close`}
                         >
                           {createDistrictName(c)}
                         </Link>
@@ -127,7 +126,9 @@ const SideBar = ({ data }) => {
                         key={`${counts[c].city}-${counts[c].district}`}
                         className="menu-item"
                       >
-                        <Link to={`/ha-noi/${getSlug(c, getSlugOptions)}`}>
+                        <Link
+                          to={`/ha-noi/${getSlug(c, getSlugOptions)}/#close`}
+                        >
                           {createDistrictName(c)}
                         </Link>
                       </li>

@@ -6,9 +6,6 @@ const NavBar = () => (
     <a className="off-canvas-toggle btn btn-link btn-action" href="#sidebar">
       <i className="icon icon-menu" />
     </a>
-    <Link className="btn btn-primary" to="/">
-      Trang Chủ
-    </Link>
   </div>
 )
 

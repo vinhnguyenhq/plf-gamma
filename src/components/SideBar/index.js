@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
+import Link, { navigateTo } from 'gatsby-link'
 import getSlug from 'speakingurl'
 
 function formatSideBarData(districts, edges) {
@@ -61,6 +61,18 @@ const SideBar = ({ data }) => {
       <div className="docs-nav">
         <div className="accordion-container">
           <div className="accordion">
+            <input hidden={true} />
+            <label
+              onClick={() => {
+                navigateTo('/')
+                window.location.reload(false)
+              }}
+              className="accordion-header c-hand"
+            >
+              Thông Tin Chung
+            </label>
+          </div>
+          <div className="accordion">
             <input
               type="checkbox"
               id="ho-chi-minh"
@@ -81,7 +93,12 @@ const SideBar = ({ data }) => {
                         key={`${item.city}-${item.district}`}
                         className="menu-item"
                       >
-                        <Link to={`/ho-chi-minh/${getSlug(c, getSlugOptions)}`}>
+                        <Link
+                          to={`/ho-chi-minh/${getSlug(c, getSlugOptions)}`}
+                          onClick={() => {
+                            window.location.reload(false)
+                          }}
+                        >
                           {createDistrictName(c)}
                         </Link>
                       </li>

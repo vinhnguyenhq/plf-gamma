@@ -35,17 +35,17 @@ const IndexPage = ({ data }) => {
 
   return (
     <div className="container">
-      <h3 className="s-title">Thông tin chung</h3>
+      <h3 className="s-title">Hệ Thống nhận hàng Lazada Express Việt Nam</h3>
       <div className="docs-note">
         <ul>
           <li>
-            {`Số lượng cửa hàng ở ${locations.hochiminh.name} là `}
+            {`Số lượng cửa hàng ở ${locations.hochiminh.name} `}
             <span className="label label-secondary label-rounded">
               {locations.hochiminh.count}
             </span>
           </li>
           <li>
-            {`Số lượng cửa hàng ở ${locations.hanoi.name} là `}
+            {`Số lượng cửa hàng ở ${locations.hanoi.name} `}
             <span className="label label-secondary label-rounded">
               {locations.hanoi.count}
             </span>
@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
           <div className="divider" />
 
           <li>
-            Đối với đại lý
+            Điều kiện nhận hàng
             <ul>
               <li>
                 Tối đa{' '}

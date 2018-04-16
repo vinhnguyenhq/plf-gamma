@@ -15,7 +15,7 @@ const District = props => {
       </h3>
       <div className="docs-note">
         <p>
-          {`Số cửa hàng trong khu vực thời điểm hiện tại `}{' '}
+          {`Số cửa hàng trong khu vực `}{' '}
           <span className="label label-secondary label-rounded">
             {props.nodes.length}
           </span>

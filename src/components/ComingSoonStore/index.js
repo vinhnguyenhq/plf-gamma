@@ -2,17 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import StoreDetails from '../StoreDetails'
 
-const createDistrictName = districtName => {
-  if (isNaN(districtName)) return districtName
-  else return `Quận ${districtName}`
-}
-
 const District = props => {
   return (
     <div className="container">
-      <h3 className="s-title district-name">
-        {createDistrictName(props.nodes[0].node.district)}
-      </h3>
+      <h3 className="s-title district-name">{props.city}</h3>
       <div className="docs-note">
         <p>
           {`Số cửa hàng trong khu vực `}{' '}

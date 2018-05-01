@@ -1,0 +1,95 @@
+$primary-color: tomato;
+$secondary-color: tomato;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: #808c99;
+  background-color: white;
+}
+
+span.label.label-secondary.label-rounded {
+  color: $primary-color;
+}
+
+.docs-content .s-title,
+.docs-content .s-subtitle {
+  color: $primary-color;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+i.icon.icon-menu {
+  color: $primary-color;
+}
+
+div#sidebar {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.docs-navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+i.icon.icon-2x.icon-location {
+  color: tomato;
+}
+
+.docs-sidebar .accordion input:checked ~ .accordion-header {
+  color: $primary-color;
+}
+
+.docs-sidebar .accordion input ~ .accordion-header {
+  color: $primary-color;
+  font-size: 0.65rem;
+  font-weight: 100;
+  &.larger {
+    font-size: 0.8rem;
+  }
+}
+
+.docs-sidebar .accordion .menu .menu-item {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 960px) {
+  .docs-brand {
+    top: 1.35rem;
+    width: 200px;
+  }
+
+  .docs-sidebar .docs-nav {
+    top: 5rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .card {
+    min-height: 200px;
+  }
+
+  h3.s-title.district-name {
+    text-decoration: underline;
+  }
+}
+
+.spotlight-home-mobile {
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .docs-content .s-title,
+  .docs-content .s-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+  div.docs-note > p {
+    text-align: center;
+  }
+
+  .spotlight-home-mobile {
+    visibility: visible;
+  }
+}

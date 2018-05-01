@@ -10,29 +10,33 @@ import 'spectre.css/dist/spectre.min.css'
 import 'spectre.css/dist/spectre-exp.min.css'
 import 'spectre.css/dist/spectre-icons.min.css'
 import './index.css'
+import './lex.scss'
 
-const TemplateWrapper = ({ data, children }) => (
-  <div className="docs-container off-canvas off-canvas-sidebar-show">
-    <Helmet
-      title="Partner Location Finder"
-      meta={[
-        {
-          name: 'description',
-          content: 'Lazada Express Partner Location Finder',
-        },
-        { name: 'keywords', content: 'LEX' },
-      ]}
-    />
-    <div className="docs-navbar">
-      <NavBar />
+const TemplateWrapper = ({ data, children }) => {
+  console.log(data)
+  return (
+    <div className="docs-container off-canvas off-canvas-sidebar-show">
+      <Helmet
+        title="Partner Location Finder"
+        meta={[
+          {
+            name: 'description',
+            content: 'Lazada Express Partner Location Finder',
+          },
+          { name: 'keywords', content: 'LEX' },
+        ]}
+      />
+      <div className="docs-navbar">
+        <NavBar />
+      </div>
+      <div id="sidebar" className="docs-sidebar off-canvas-sidebar">
+        <SideBar data={data.allLocationsXlsxSheet1} />
+      </div>
+      <a className="off-canvas-overlay" href="#close" />
+      <div className="docs-content off-canvas-content">{children()}</div>
     </div>
-    <div id="sidebar" className="docs-sidebar off-canvas-sidebar">
-      <SideBar data={data.allLocationsXlsxSheet1} />
-    </div>
-    <a className="off-canvas-overlay" href="#close" />
-    <div className="docs-content off-canvas-content">{children()}</div>
-  </div>
-)
+  )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

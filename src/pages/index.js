@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import HomeBackgroundImage from '../imgs/home.jpg'
 
 function formatData(data) {
   let locations = {
@@ -48,6 +49,12 @@ const IndexPage = ({ data }) => {
             {`Số lượng cửa hàng ở ${locations.hanoi.name} `}
             <span className="label label-secondary label-rounded">
               {locations.hanoi.count}
+            </span>
+          </li>
+          <li>
+            {`Số lượng cửa hàng sắp hoạt động `}
+            <span className="label label-secondary label-rounded">
+              {locations.hochiminh.count}
             </span>
           </li>
           <li>
@@ -100,6 +107,23 @@ const IndexPage = ({ data }) => {
           </li>
         </ul>
         <div className="divider" />
+
+        <div className="spotlight-home-mobile">
+          <div className="parallax">
+            <div className="parallax-top-left" tabIndex="1" />
+            <div className="parallax-top-right" tabIndex="2" />
+            <div className="parallax-bottom-left" tabIndex="3" />
+            <div className="parallax-bottom-right" tabIndex="4" />
+            <div className="parallax-content">
+              <div className="parallax-back">
+                <img
+                  src={HomeBackgroundImage}
+                  className="img-responsive rounded"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

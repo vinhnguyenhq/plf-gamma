@@ -2,6 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import Link, { navigateTo } from 'gatsby-link'
 import getSlug from 'speakingurl'
+import openingSoonIcon from '../../imgs/calendar-with-stats-infographic.png'
 
 function formatSideBarData(districts, edges) {
   let sideBar = []
@@ -51,11 +52,10 @@ const SideBar = ({ data }) => {
       <div className="docs-brand">
         <a className="docs-logo">
           <img
-            src="https://vignette.wikia.nocookie.net/globaltvindonesia/images/b/b6/Lazada_Logo_Icon.svg/revision/latest?cb=20141123043348"
+            src="http://lex.com.my/public/images/LEL-logo.png"
             alt=""
-            style={{ width: '32px' }}
+            style={{ width: '75%' }}
           />
-          <h2>EXPRESS</h2>
         </a>
       </div>
       <div className="docs-nav">
@@ -66,7 +66,7 @@ const SideBar = ({ data }) => {
               onClick={() => {
                 navigateTo('/')
               }}
-              className="accordion-header c-hand"
+              className="accordion-header c-hand larger"
             >
               Thông Tin Chung
             </label>
@@ -77,7 +77,6 @@ const SideBar = ({ data }) => {
               id="ho-chi-minh"
               name="docs-accordion-checkbox"
               hidden={true}
-              defaultChecked={true}
             />
             <label className="accordion-header c-hand" htmlFor="ho-chi-minh">
               Hồ Chí Minh
@@ -135,6 +134,31 @@ const SideBar = ({ data }) => {
                     )
                   }
                 })}
+              </ul>
+            </div>
+          </div>
+          <div className="divider" />
+          <div className="accordion">
+            <input
+              type="checkbox"
+              id="cua-hang-sap-mo"
+              name="docs-accordion-checkbox"
+              hidden={true}
+            />
+            <label
+              className="accordion-header c-hand"
+              htmlFor="cua-hang-sap-mo"
+            >
+              Cửa hàng sắp mở
+            </label>
+            <div className="accordion-body">
+              <ul className="menu menu-nav">
+                <li key={`cua-hang-sap-mo-ho-chi-minh`} className="menu-item">
+                  <Link to={`/cua-hang-sap-mo/ho-chi-minh`}>Hồ Chí Minh</Link>
+                </li>
+                <li key={`cua-hang-sap-mo-ha-noi`} className="menu-item">
+                  <Link to={`/cua-hang-sap-mo/ha-noi`}>Hà Nội</Link>
+                </li>
               </ul>
             </div>
           </div>

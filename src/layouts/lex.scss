@@ -56,6 +56,16 @@ i.icon.icon-2x.icon-location {
   flex-grow: 1;
 }
 
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.district.opening-time {
+  margin-left: auto;
+  font-size: 0.6rem;
+}
+
 @media (min-width: 960px) {
   .docs-brand {
     top: 1.35rem;

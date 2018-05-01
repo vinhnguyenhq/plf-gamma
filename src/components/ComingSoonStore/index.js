@@ -11,9 +11,12 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
       return <span />
     } else {
       return (
-        <em>
-          <span className="float-right">{`${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`}</span>
-        </em>
+        <div className="district opening-time">
+          <em className="float-right">
+            <span
+            >{`${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`}</span>
+          </em>
+        </div>
       )
     }
   }

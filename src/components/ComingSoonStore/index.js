@@ -14,7 +14,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         <div className="district opening-time">
           <em className="float-right">
             <span
-            >{`${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`}</span>
+            >{`Coming soon: ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`}</span>
           </em>
         </div>
       )

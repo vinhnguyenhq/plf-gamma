@@ -116,7 +116,6 @@ const IndexPage = ({ data }) => {
             </ul>
           </li>
         </ul>
-        <div className="divider" />
 
         <div className="spotlight-home-mobile">
           <div className="parallax">

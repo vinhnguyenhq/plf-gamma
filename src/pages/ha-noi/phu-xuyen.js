@@ -21,7 +21,8 @@ export const PhuXuyenQuery = graphql`
       filter: { district: { eq: "Phú Xuyên" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

@@ -21,7 +21,8 @@ export const SocSonQuery = graphql`
       filter: { district: { eq: "Sóc Sơn" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

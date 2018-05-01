@@ -21,7 +21,8 @@ export const HaDongQuery = graphql`
       filter: { district: { eq: "Hà Đông" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

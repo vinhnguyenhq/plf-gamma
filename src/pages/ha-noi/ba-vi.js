@@ -21,7 +21,8 @@ export const BaViQuery = graphql`
       filter: { district: { eq: "Ba Vì" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

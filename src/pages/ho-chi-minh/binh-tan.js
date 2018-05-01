@@ -22,6 +22,7 @@ export const BinhTanQuery = graphql`
     ) {
       edges {
         node {
+          station_name
           plf_id
           complete_address
           longitude

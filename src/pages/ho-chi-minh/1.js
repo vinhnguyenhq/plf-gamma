@@ -22,6 +22,7 @@ export const DistrictNo1Query = graphql`
     ) {
       edges {
         node {
+          station_name
           plf_id
           complete_address
           longitude

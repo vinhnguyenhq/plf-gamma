@@ -21,7 +21,8 @@ export const GiaLamQuery = graphql`
       filter: { district: { eq: "Gia Lâm" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

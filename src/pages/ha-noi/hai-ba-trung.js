@@ -21,7 +21,8 @@ export const HaiBaTrungQuery = graphql`
       filter: { district: { eq: "Hai Bà Trưng" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

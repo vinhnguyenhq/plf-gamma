@@ -21,7 +21,8 @@ export const UngHoaQuery = graphql`
       filter: { district: { eq: "Ứng Hòa" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

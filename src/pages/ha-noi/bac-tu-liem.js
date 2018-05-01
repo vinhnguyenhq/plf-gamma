@@ -21,7 +21,8 @@ export const BacTuLiemQuery = graphql`
       filter: { district: { eq: "Bắc Từ Liêm" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

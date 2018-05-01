@@ -21,7 +21,8 @@ export const ChuongMyQuery = graphql`
       filter: { district: { eq: "Chương Mỹ" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

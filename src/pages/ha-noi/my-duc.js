@@ -21,7 +21,8 @@ export const MyDucQuery = graphql`
       filter: { district: { eq: "Mỹ Đức" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

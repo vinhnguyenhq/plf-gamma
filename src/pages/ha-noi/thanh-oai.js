@@ -21,7 +21,8 @@ export const ThanhOaiQuery = graphql`
       filter: { district: { eq: "Thanh Oai" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

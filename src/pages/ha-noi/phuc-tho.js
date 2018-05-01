@@ -21,7 +21,8 @@ export const PhucThoQuery = graphql`
       filter: { district: { eq: "Phúc Thọ" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

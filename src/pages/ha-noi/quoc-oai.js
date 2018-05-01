@@ -21,7 +21,8 @@ export const QuocOaiQuery = graphql`
       filter: { district: { eq: "Quốc Oai" }, status: { eq: "Done" } }
     ) {
       edges {
-        node { station_name
+        node {
+          station_name
           plf_id
           complete_address
           longitude

@@ -115,24 +115,9 @@ const IndexPage = ({ data }) => {
               </li>
             </ul>
           </li>
-        </ul>
 
-        <div className="spotlight-home-mobile">
-          <div className="parallax">
-            <div className="parallax-top-left" tabIndex="1" />
-            <div className="parallax-top-right" tabIndex="2" />
-            <div className="parallax-bottom-left" tabIndex="3" />
-            <div className="parallax-bottom-right" tabIndex="4" />
-            <div className="parallax-content">
-              <div className="parallax-back">
-                <img
-                  src={HomeBackgroundImage}
-                  className="img-responsive rounded"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+          <div className="divider" />
+        </ul>
       </div>
     </div>
   )

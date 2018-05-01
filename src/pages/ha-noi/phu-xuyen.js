@@ -17,9 +17,11 @@ export default PhuXuyen
 
 export const PhuXuyenQuery = graphql`
   query PhuXuyenQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Phú Xuyên" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Phú Xuyên" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

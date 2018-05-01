@@ -12,20 +12,30 @@ function formatData(data) {
       name: 'Hà Nội',
       count: 0,
     },
+    coming: {
+      name: '',
+      count: 0,
+    },
   }
 
   if (data.allLocationsXlsxSheet1) {
     const originalLocations = data.allLocationsXlsxSheet1
+
     const number_of_locations_in_ha_noi = originalLocations.edges.filter(
-      item => item.node.city === 'Hanoi City'
+      item => item.node.city === 'Hanoi City' && item.node.status === 'Done'
     ).length
 
     const number_of_locations_in_hcm = originalLocations.edges.filter(
-      item => item.node.city === 'Hochiminh City'
+      item => item.node.city === 'Hochiminh City' && item.node.status === 'Done'
+    ).length
+
+    const number_of_opening_soon_locations = originalLocations.edges.filter(
+      item => item.node.status === 'Setting'
     ).length
 
     locations.hochiminh.count = number_of_locations_in_hcm
     locations.hanoi.count = number_of_locations_in_ha_noi
+    locations.coming.count = number_of_opening_soon_locations
   }
 
   return locations
@@ -54,7 +64,7 @@ const IndexPage = ({ data }) => {
           <li>
             {`Số lượng cửa hàng sắp hoạt động `}
             <span className="label label-secondary label-rounded">
-              {locations.hochiminh.count}
+              {locations.coming.count}
             </span>
           </li>
           <li>
@@ -138,6 +148,7 @@ export const IndexPageQuery = graphql`
         node {
           id
           city
+          status
         }
       }
     }

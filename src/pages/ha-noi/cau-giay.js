@@ -17,9 +17,11 @@ export default CauGiay
 
 export const CauGiayQuery = graphql`
   query CauGiayQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Cầu Giấy" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Cầu Giấy" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

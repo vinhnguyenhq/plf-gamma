@@ -17,9 +17,11 @@ export default SonTay
 
 export const SonTayQuery = graphql`
   query SonTayQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Sơn Tây" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Sơn Tây" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

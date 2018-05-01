@@ -17,7 +17,9 @@ export default BinhTan
 
 export const BinhTanQuery = graphql`
   query BinhTanQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Bình Tân" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Bình Tân" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

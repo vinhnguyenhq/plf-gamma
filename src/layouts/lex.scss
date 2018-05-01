@@ -52,6 +52,10 @@ i.icon.icon-2x.icon-location {
   font-size: 0.8rem;
 }
 
+.card-body {
+  flex-grow: 1;
+}
+
 @media (min-width: 960px) {
   .docs-brand {
     top: 1.35rem;

@@ -17,7 +17,9 @@ export default TanBinh
 
 export const TanBinhQuery = graphql`
   query TanBinhQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Tân Bình" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Tân Bình" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

@@ -17,7 +17,9 @@ export default TanPhu
 
 export const TanPhuQuery = graphql`
   query TanPhuQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Tân Phú" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Tân Phú" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

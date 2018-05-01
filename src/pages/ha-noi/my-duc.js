@@ -17,9 +17,11 @@ export default MyDuc
 
 export const MyDucQuery = graphql`
   query MyDucQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Mỹ Đức" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Mỹ Đức" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

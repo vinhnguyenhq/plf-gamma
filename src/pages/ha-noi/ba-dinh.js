@@ -17,9 +17,12 @@ export default BaDinh
 
 export const BaDinhQuery = graphql`
   query BaDinhQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Ba Đình" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Ba Đình" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
+          station_name
           plf_id
           complete_address
           longitude

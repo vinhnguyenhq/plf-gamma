@@ -17,7 +17,9 @@ export default CanGio
 
 export const CanGioQuery = graphql`
   query CanGioQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Cần Giờ" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Cần Giờ" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

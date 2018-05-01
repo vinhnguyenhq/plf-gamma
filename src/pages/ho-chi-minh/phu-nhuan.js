@@ -17,7 +17,9 @@ export default PhuNhuan
 
 export const PhuNhuanQuery = graphql`
   query PhuNhuanQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Phú Nhuận" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Phú Nhuận" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

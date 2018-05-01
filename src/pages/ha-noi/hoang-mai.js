@@ -17,9 +17,11 @@ export default HoangMai
 
 export const HoangMaiQuery = graphql`
   query HoangMaiQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Gia Lâm" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hoàng Mai" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

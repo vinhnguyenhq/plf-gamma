@@ -17,9 +17,11 @@ export default NamTuLiem
 
 export const NamTuLiemQuery = graphql`
   query NamTuLiemQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Nam Từ Liêm" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Nam Từ Liêm" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

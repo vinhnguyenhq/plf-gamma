@@ -17,9 +17,11 @@ export default LongBien
 
 export const LongBienQuery = graphql`
   query LongBienQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Long Biên" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Long Biên" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

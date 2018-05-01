@@ -17,9 +17,11 @@ export default TayHo
 
 export const TayHoQuery = graphql`
   query TayHoQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Tây Hồ" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Tây Hồ" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

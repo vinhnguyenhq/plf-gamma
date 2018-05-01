@@ -17,9 +17,11 @@ export default HaDong
 
 export const HaDongQuery = graphql`
   query HaDongQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Hà Đông" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hà Đông" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

@@ -17,9 +17,11 @@ export default SocSon
 
 export const SocSonQuery = graphql`
   query SocSonQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Sóc Sơn" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Sóc Sơn" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

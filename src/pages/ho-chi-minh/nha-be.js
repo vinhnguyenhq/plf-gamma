@@ -17,7 +17,9 @@ export default NhaBe
 
 export const NhaBeQuery = graphql`
   query NhaBeQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Nhà Bè" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Nhà Bè" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

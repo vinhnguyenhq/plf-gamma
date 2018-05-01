@@ -17,9 +17,11 @@ export default ThachThat
 
 export const ThachThatQuery = graphql`
   query ThachThatQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thạch Thất" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thạch Thất" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

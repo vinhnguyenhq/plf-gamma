@@ -17,9 +17,11 @@ export default UngHoa
 
 export const UngHoaQuery = graphql`
   query UngHoaQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Ứng Hòa" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Ứng Hòa" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

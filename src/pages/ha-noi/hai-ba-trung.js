@@ -17,9 +17,11 @@ export default HaiBaTrung
 
 export const HaiBaTrungQuery = graphql`
   query HaiBaTrungQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Hai Bà Trưng" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hai Bà Trưng" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

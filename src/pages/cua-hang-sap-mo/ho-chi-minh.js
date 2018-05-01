@@ -28,6 +28,7 @@ export const HoChiMinhQuery = graphql`
         node {
           plf_id
           complete_address
+          station_name
           longitude
           latitude
           city

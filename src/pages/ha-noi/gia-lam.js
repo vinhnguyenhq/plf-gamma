@@ -17,9 +17,11 @@ export default GiaLam
 
 export const GiaLamQuery = graphql`
   query GiaLamQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Gia Lâm" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Gia Lâm" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

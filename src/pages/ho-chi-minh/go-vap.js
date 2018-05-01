@@ -17,7 +17,9 @@ export default GoVap
 
 export const GoVapQuery = graphql`
   query GoVapQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Gò Vấp" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Gò Vấp" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

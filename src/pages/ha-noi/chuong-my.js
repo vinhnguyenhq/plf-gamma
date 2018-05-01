@@ -17,9 +17,11 @@ export default ChuongMy
 
 export const ChuongMyQuery = graphql`
   query ChuongMyQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Chương Mỹ" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Chương Mỹ" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

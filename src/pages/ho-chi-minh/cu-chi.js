@@ -17,7 +17,9 @@ export default CuChi
 
 export const CuChiQuery = graphql`
   query CuChiQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Củ Chi" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Củ Chi" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

@@ -17,9 +17,11 @@ export default ThuongTin
 
 export const ThuongTinQuery = graphql`
   query ThuongTinQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thường Tín" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thường Tín" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

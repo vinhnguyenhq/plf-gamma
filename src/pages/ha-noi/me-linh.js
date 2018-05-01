@@ -17,9 +17,11 @@ export default MeLinh
 
 export const MeLinhQuery = graphql`
   query MeLinhQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Mê Linh" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Mê Linh" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

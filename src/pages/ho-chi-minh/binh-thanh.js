@@ -17,7 +17,9 @@ export default BinhThanh
 
 export const BinhThanhQuery = graphql`
   query BinhThanhQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Bình Thạnh" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Bình Thạnh" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

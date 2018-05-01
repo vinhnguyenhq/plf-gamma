@@ -17,9 +17,11 @@ export default ThanhTri
 
 export const ThanhTriQuery = graphql`
   query ThanhTriQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thanh Trì" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thanh Trì" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

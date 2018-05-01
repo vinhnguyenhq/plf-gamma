@@ -17,9 +17,11 @@ export default DanPhuong
 
 export const DanPhuongQuery = graphql`
   query DanPhuongQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Đan Phượng" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Đan Phượng" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

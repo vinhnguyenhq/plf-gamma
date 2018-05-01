@@ -17,7 +17,9 @@ export default DistrictNo1
 
 export const DistrictNo1Query = graphql`
   query DistrictNo1Query {
-    allLocationsXlsxSheet1(filter: { district: { eq: "1" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "1" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

@@ -17,9 +17,11 @@ export default QuocOai
 
 export const QuocOaiQuery = graphql`
   query QuocOaiQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Quốc Oai" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Quốc Oai" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

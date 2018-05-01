@@ -17,9 +17,11 @@ export default DongAnh
 
 export const DongAnhQuery = graphql`
   query DongAnhQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Đông Anh" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Đông Anh" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

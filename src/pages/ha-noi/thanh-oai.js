@@ -17,9 +17,11 @@ export default ThanhOai
 
 export const ThanhOaiQuery = graphql`
   query ThanhOaiQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thanh Oai" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thanh Oai" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

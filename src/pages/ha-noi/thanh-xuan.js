@@ -17,9 +17,11 @@ export default ThanhXuan
 
 export const ThanhXuanQuery = graphql`
   query ThanhXuanQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thanh Xuân" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thanh Xuân" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

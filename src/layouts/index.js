@@ -13,7 +13,6 @@ import './index.css'
 import './lex.scss'
 
 const TemplateWrapper = ({ data, children }) => {
-  console.log(data)
   return (
     <div className="docs-container off-canvas off-canvas-sidebar-show">
       <Helmet

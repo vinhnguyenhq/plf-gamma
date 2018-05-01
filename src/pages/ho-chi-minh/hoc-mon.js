@@ -17,7 +17,9 @@ export default HocMon
 
 export const HocMonQuery = graphql`
   query HocMonQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Hóc Môn" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hóc Môn" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

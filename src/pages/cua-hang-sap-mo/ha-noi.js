@@ -26,6 +26,7 @@ export const HaNoiQuery = graphql`
           plf_id
           complete_address
           longitude
+          station_name
           latitude
           city
           ward

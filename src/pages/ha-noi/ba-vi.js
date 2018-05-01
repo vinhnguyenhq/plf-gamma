@@ -17,9 +17,11 @@ export default BaVi
 
 export const BaViQuery = graphql`
   query BaViQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Ba Vì" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Ba Vì" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

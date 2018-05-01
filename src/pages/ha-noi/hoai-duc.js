@@ -17,9 +17,11 @@ export default HoaiDuc
 
 export const HoaiDucQuery = graphql`
   query HoaiDucQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Gia Lâm" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hoài Đức" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

@@ -17,7 +17,9 @@ export default ThuDuc
 
 export const ThuDucQuery = graphql`
   query ThuDucQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Thủ Đức" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Thủ Đức" }, status: { eq: "Done" } }
+    ) {
       edges {
         node {
           plf_id

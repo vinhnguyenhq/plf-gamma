@@ -17,9 +17,11 @@ export default HoanKiem
 
 export const HoanKiemQuery = graphql`
   query HoanKiemQuery {
-    allLocationsXlsxSheet1(filter: { district: { eq: "Hoàn Kiếm" } }) {
+    allLocationsXlsxSheet1(
+      filter: { district: { eq: "Hoàn Kiếm" }, status: { eq: "Done" } }
+    ) {
       edges {
-        node {
+        node { station_name
           plf_id
           complete_address
           longitude

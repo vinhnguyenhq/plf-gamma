@@ -4,21 +4,21 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.241",
-    "gatsby-image": "^1.0.48",
-    "gatsby-link": "^1.6.39",
+    "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
+    "gatsby-link": "^1.6.46",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-sharp": "^1.6.44",
-    "gatsby-source-filesystem": "^1.5.29",
+    "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-csv": "^1.3.9",
-    "gatsby-transformer-excel": "^1.0.6",
-    "gatsby-transformer-sharp": "^1.6.24",
+    "gatsby-transformer-excel": "^1.0.9",
+    "gatsby-transformer-sharp": "^1.6.27",
     "react-countdown-now": "^1.3.0",
     "react-helmet": "^5.2.0",
     "speakingurl": "^14.0.1",
-    "spectre.css": "^0.5.1"
+    "spectre.css": "^0.5.3"
   },
   "keywords": [
     "gatsby"
@@ -31,6 +31,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.14.0"
   }
 }

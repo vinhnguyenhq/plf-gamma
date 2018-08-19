@@ -77,21 +77,81 @@ const IndexPage = ({ data }) => {
                 </span>
               </li>
               <li>
+                TM{' '}
+                <span className="label label-secondary label-rounded">
+                  9:00 - 19:00
+                </span>
+              </li>
+              <li>
+                Shop & Go{' '}
+                <span className="label label-secondary label-rounded">
+                  24/7
+                </span>
+              </li>
+              <li>
+                Coopsmile{' '}
+                <span className="label label-secondary label-rounded">
+                  7:00 - 21:00
+                </span>
+              </li>
+              <li>
+                Circle K{' '}
+                <span className="label label-secondary label-rounded">
+                  24/7
+                </span>
+              </li>
+              <li>
+                7Eleven{' '}
+                <span className="label label-secondary label-rounded">
+                  24/7
+                </span>
+              </li>
+              <li>
+                F88{' '}
+                <span className="label label-secondary label-rounded">
+                  8:30 - 21:00
+                </span>
+              </li>
+              <li>
+                Shop Tre Tho{' '}
+                <span className="label label-secondary label-rounded">
+                  8:00 - 22:00
+                </span>
+              </li>
+              <li>
+                Bibo Mart{' '}
+                <span className="label label-secondary label-rounded">
+                  9:00 - 21:00
+                </span>
+              </li>
+              <li>
+                Viễn Thông A{' '}
+                <span className="label label-secondary label-rounded">
+                  8:00 - 21:00
+                </span>
+              </li>
+              <li>
+                An Tam Pharma{' '}
+                <span className="label label-secondary label-rounded">
+                  7:00 - 22:00
+                </span>
+              </li>
+              <li>
+                Pharmacity{' '}
+                <span className="label label-secondary label-rounded">
+                  7:00 - 23:30
+                </span>
+              </li>
+              <li>
                 BsMart{' '}
                 <span className="label label-secondary label-rounded">
                   24/7
                 </span>
               </li>
               <li>
-                FPT{' '}
+                Family Mart{' '}
                 <span className="label label-secondary label-rounded">
-                  8:00 - 22:00
-                </span>
-              </li>
-              <li>
-                Truemoney{' '}
-                <span className="label label-secondary label-rounded">
-                  8:00 - 22:00
+                  24/7
                 </span>
               </li>
             </ul>

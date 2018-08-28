@@ -45,8 +45,9 @@ export default TemplateWrapper
 
 export const SideBarQuery = graphql`
   query MetaDataQuery {
-    allLocationsXlsxSheet1(filter: { city: { regex: "/City/" } }) {
+    allLocationsXlsxSheet1(filter: { city: { regex: "" } }) {
       distinct(field: district)
+      totalCount
       edges {
         node {
           city

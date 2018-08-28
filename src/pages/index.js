@@ -12,6 +12,14 @@ function formatData(data) {
       name: 'Hà Nội',
       count: 0,
     },
+    binhduong: {
+      name: 'Bình Dương',
+      count: 0,
+    },
+    dongnai: {
+      name: 'Đồng Nai',
+      count: 0,
+    },
     coming: {
       name: '',
       count: 0,
@@ -29,12 +37,22 @@ function formatData(data) {
       item => item.node.city === 'Hochiminh City' && item.node.status === 'Done'
     ).length
 
+    const number_of_locations_in_binhduong = originalLocations.edges.filter(
+      item => item.node.city === 'Binhduong' && item.node.status === 'Done'
+    ).length
+
+    const number_of_locations_in_dongnai = originalLocations.edges.filter(
+      item => item.node.city === 'Dongnai' && item.node.status === 'Done'
+    ).length
+
     const number_of_opening_soon_locations = originalLocations.edges.filter(
       item => item.node.status === 'Setting'
     ).length
 
     locations.hochiminh.count = number_of_locations_in_hcm
     locations.hanoi.count = number_of_locations_in_ha_noi
+    locations.binhduong.count = number_of_locations_in_binhduong
+    locations.dongnai.count = number_of_locations_in_dongnai
     locations.coming.count = number_of_opening_soon_locations
   }
 
@@ -62,11 +80,26 @@ const IndexPage = ({ data }) => {
             </span>
           </li>
           <li>
+            {`Số lượng cửa hàng ở ${locations.binhduong.name} `}
+            <span className="label label-secondary label-rounded">
+              {locations.binhduong.count}
+            </span>
+          </li>
+          <li>
+            {`Số lượng cửa hàng ở ${locations.dongnai.name} `}
+            <span className="label label-secondary label-rounded">
+              {locations.dongnai.count}
+            </span>
+          </li>
+          <li>
             {`Số lượng cửa hàng sắp hoạt động `}
             <span className="label label-secondary label-rounded">
               {locations.coming.count}
             </span>
           </li>
+
+          <div className="divider" />
+
           <li>
             Giờ làm việc chung
             <ul>

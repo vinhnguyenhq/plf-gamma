@@ -52,7 +52,7 @@ const SideBar = ({ data }) => {
       <div className="docs-brand">
         <a className="docs-logo">
           <img
-            src="http://lex.com.my/public/images/LEL-logo.png"
+            src="http://lex.com.my/images/logo.png"
             alt=""
             style={{ width: '75%' }}
           />
@@ -127,6 +127,71 @@ const SideBar = ({ data }) => {
                       >
                         <Link
                           to={`/ha-noi/${getSlug(c, getSlugOptions)}/#close`}
+                        >
+                          {createDistrictName(c)}
+                        </Link>
+                      </li>
+                    )
+                  }
+                })}
+              </ul>
+            </div>
+          </div>
+          <div className="accordion">
+            <input
+              type="checkbox"
+              id="binh-duong"
+              name="docs-accordion-checkbox"
+              hidden={true}
+            />
+            <label className="accordion-header c-hand" htmlFor="binh-duong">
+              Bình Dương
+            </label>
+            <div className="accordion-body">
+              <ul className="menu menu-nav">
+                {Object.keys(counts).map(c => {
+                  if (counts[c].city === 'Binhduong') {
+                    return (
+                      <li
+                        key={`${counts[c].city}-${counts[c].district}`}
+                        className="menu-item"
+                      >
+                        <Link
+                          to={`/binh-duong/${getSlug(
+                            c,
+                            getSlugOptions
+                          )}/#close`}
+                        >
+                          {createDistrictName(c)}
+                        </Link>
+                      </li>
+                    )
+                  }
+                })}
+              </ul>
+            </div>
+          </div>
+          <div className="accordion">
+            <input
+              type="checkbox"
+              id="dong-nai"
+              name="docs-accordion-checkbox"
+              hidden={true}
+            />
+            <label className="accordion-header c-hand" htmlFor="dong-nai">
+              Đồng Nai
+            </label>
+            <div className="accordion-body">
+              <ul className="menu menu-nav">
+                {Object.keys(counts).map(c => {
+                  if (counts[c].city === 'Dongnai') {
+                    return (
+                      <li
+                        key={`${counts[c].city}-${counts[c].district}`}
+                        className="menu-item"
+                      >
+                        <Link
+                          to={`/dong-nai/${getSlug(c, getSlugOptions)}/#close`}
                         >
                           {createDistrictName(c)}
                         </Link>

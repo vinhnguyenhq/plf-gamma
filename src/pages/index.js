@@ -203,7 +203,7 @@ const IndexPage = ({ data }) => {
               <li>
                 Kích cỡ gói hàng tối đa{' '}
                 <span className="label label-secondary label-rounded">
-                  18 x 18 x 35
+                  15 x 15 x 35
                 </span>
               </li>
             </ul>

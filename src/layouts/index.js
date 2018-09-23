@@ -29,6 +29,7 @@ const TemplateWrapper = ({ data, children }) => {
         <NavBar />
       </div>
       <div id="sidebar" className="docs-sidebar off-canvas-sidebar">
+        {console.log(data)}
         <SideBar data={data.allLocationsXlsxSheet1} />
       </div>
       <a className="off-canvas-overlay" href="#close" />

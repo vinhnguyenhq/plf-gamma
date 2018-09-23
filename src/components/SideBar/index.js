@@ -224,6 +224,9 @@ const SideBar = ({ data }) => {
                 <li key={`cua-hang-sap-mo-ha-noi`} className="menu-item">
                   <Link to={`/cua-hang-sap-mo/ha-noi`}>Hà Nội</Link>
                 </li>
+                <li key={`cua-hang-sap-mo-binh-duong`} className="menu-item">
+                  <Link to={`/cua-hang-sap-mo/binh-duong`}>Bình Dương</Link>
+                </li>
               </ul>
             </div>
           </div>

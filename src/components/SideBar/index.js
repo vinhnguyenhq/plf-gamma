@@ -92,6 +92,7 @@ const SideBar = ({ data }) => {
                         className="menu-item"
                       >
                         <Link
+                          replace
                           to={`/ho-chi-minh/${getSlug(
                             c,
                             getSlugOptions
@@ -126,6 +127,7 @@ const SideBar = ({ data }) => {
                         className="menu-item"
                       >
                         <Link
+                          replace
                           to={`/ha-noi/${getSlug(c, getSlugOptions)}/#close`}
                         >
                           {createDistrictName(c)}
@@ -157,6 +159,7 @@ const SideBar = ({ data }) => {
                         className="menu-item"
                       >
                         <Link
+                          replace
                           to={`/binh-duong/${getSlug(
                             c,
                             getSlugOptions
@@ -191,6 +194,7 @@ const SideBar = ({ data }) => {
                         className="menu-item"
                       >
                         <Link
+                          replace
                           to={`/dong-nai/${getSlug(c, getSlugOptions)}/#close`}
                         >
                           {createDistrictName(c)}
@@ -219,19 +223,41 @@ const SideBar = ({ data }) => {
             <div className="accordion-body">
               <ul className="menu menu-nav">
                 <li key={`cua-hang-sap-mo-ho-chi-minh`} className="menu-item">
-                  <Link to={`/cua-hang-sap-mo/ho-chi-minh`}>Hồ Chí Minh</Link>
+                  <Link replace to={`/cua-hang-sap-mo/ho-chi-minh`}>
+                    Hồ Chí Minh
+                  </Link>
                 </li>
                 <li key={`cua-hang-sap-mo-ha-noi`} className="menu-item">
-                  <Link to={`/cua-hang-sap-mo/ha-noi`}>Hà Nội</Link>
+                  <Link replace to={`/cua-hang-sap-mo/ha-noi`}>
+                    Hà Nội
+                  </Link>
                 </li>
                 <li key={`cua-hang-sap-mo-binh-duong`} className="menu-item">
-                  <Link to={`/cua-hang-sap-mo/binh-duong`}>Bình Dương</Link>
+                  <Link replace to={`/cua-hang-sap-mo/binh-duong`}>
+                    Bình Dương
+                  </Link>
                 </li>
                 <li key={`cua-hang-sap-mo-dong-nai`} className="menu-item">
-                  <Link to={`/cua-hang-sap-mo/dong-nai`}>Đồng Nai</Link>
+                  <Link replace to={`/cua-hang-sap-mo/dong-nai`}>
+                    Đồng Nai
+                  </Link>
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="accordion">
+            <input hidden={true} disabled={true} />
+            <label
+              className="accordion-header c-hand"
+              onClick={() =>
+                window.open(
+                  'https://www.google.com/maps/@10.8303969,106.6709287,16z/data=!4m2!6m1!1s1vhpjCUHNXFm6IaFl6xbsMWiVLfGOGz4H',
+                  '_blank'
+                )
+              }
+            >
+              Cửa hàng quanh đây
+            </label>
           </div>
         </div>
       </div>
